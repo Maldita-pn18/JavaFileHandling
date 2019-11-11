@@ -31,6 +31,7 @@ public class Login extends javax.swing.JFrame {
      */
     public Login() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -189,11 +190,14 @@ public class Login extends javax.swing.JFrame {
             }
             if(exists == false){
                 JOptionPane.showMessageDialog(null, "Invalid Account!");
+            }else{
+                new Dashboard(this.Username, this.Password).setVisible(true);
+                this.setVisible(false);
             }
         }else{
             JOptionPane.showMessageDialog(null, "Account Doesn't Exist!");
         }
-//        AddUser au = new AddUser();
+//      
     }//GEN-LAST:event_loginActionPerformed
 
     /**
@@ -258,32 +262,32 @@ public class Login extends javax.swing.JFrame {
         }
     }
 
-    public static void retrieve() {
-        String filePath = "C:\\Users\\2ndyrGroupA\\Desktop\\\\Users.txt";
-        String line = null;
-        BufferedReader reader = null;
-        FileReader freader = null;
-//
-        try {
-            freader = new FileReader(filePath);
-            reader = new BufferedReader(freader);
-            while ((line = reader.readLine()) != null) {
-                System.out.println(line);
-            }
-        } catch (RuntimeException re) {
-            System.out.println(re);
-        } catch (FileNotFoundException fnf) {
-            System.out.println(fnf);
-        } catch (IOException ioe) {
-            System.out.println(ioe);
-        } finally {
-            try {
-                reader.close();
-            } catch (IOException ioe) {
-                System.out.println(ioe);
-            }
-        }
-    }
+//    public static void retrieve() {
+//        String filePath = "C:\\Users\\2ndyrGroupA\\Desktop\\\\Users.txt";
+//        String line = null;
+//        BufferedReader reader = null;
+//        FileReader freader = null;
+////
+//        try {
+//            freader = new FileReader(filePath);
+//            reader = new BufferedReader(freader);
+//            while ((line = reader.readLine()) != null) {
+//                System.out.println(line);
+//            }
+//        } catch (RuntimeException re) {
+//            System.out.println(re);
+//        } catch (FileNotFoundException fnf) {
+//            System.out.println(fnf);
+//        } catch (IOException ioe) {
+//            System.out.println(ioe);
+//        } finally {
+//            try {
+//                reader.close();
+//            } catch (IOException ioe) {
+//                System.out.println(ioe);
+//            }
+//        }
+//    }
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
