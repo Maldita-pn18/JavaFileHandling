@@ -182,9 +182,6 @@ public class Login extends javax.swing.JFrame {
                     submit(Username, Password);
                     exists = true;
                     
-                    //call the dashboard UI
-                    
-                    
                     break;
                 }
             }

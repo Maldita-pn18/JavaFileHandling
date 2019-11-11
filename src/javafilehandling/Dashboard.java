@@ -36,6 +36,7 @@ public class Dashboard extends javax.swing.JFrame {
         this.emailAccount = email;
         this.passwordAccount = password;
         this.setLocationRelativeTo(null);
+        System.out.println(emailAccount+ " "+password);
     }
 
     /**
@@ -189,7 +190,8 @@ public class Dashboard extends javax.swing.JFrame {
 
     private void updateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateActionPerformed
         // TODO add your handling code here:
-        
+        new updateAccount(this.emailAccount, this.passwordAccount).setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_updateActionPerformed
 
     /**

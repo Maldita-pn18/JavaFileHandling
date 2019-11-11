@@ -328,6 +328,7 @@ public class Register extends javax.swing.JFrame {
     }
 
     public void read() {
+        //method to read files and store to ArrayList above
         String filePath = "C:\\Users\\2ndyrGroupA\\Desktop\\Register.txt";
         String line = null;
         BufferedReader reader = null;
