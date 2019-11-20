@@ -184,7 +184,7 @@ public class updateAccount extends javax.swing.JFrame {
 
     private void cancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelActionPerformed
         // TODO add your handling code here:
-        new Dashboard().setVisible(true);
+        new Dashboard(this.toUpdateEmail,this.toUpdatePass).setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_cancelActionPerformed
 
@@ -194,6 +194,9 @@ public class updateAccount extends javax.swing.JFrame {
         this.updateLname = lname.getText();
         this.updateEmail = email.getText();
         this.updatePass = password.getText();
+        
+        this.toUpdateEmail = this.updateEmail;
+        this.toUpdatePass = this.updatePass;
 
         Register update = new Register();
         update.read();
@@ -226,7 +229,7 @@ public class updateAccount extends javax.swing.JFrame {
 
     private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
         // TODO add your handling code here:
-        new Dashboard().setVisible(true);
+        new Dashboard(this.toUpdateEmail,this.toUpdateEmail).setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_backActionPerformed
 

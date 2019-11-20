@@ -36,7 +36,7 @@ public class Dashboard extends javax.swing.JFrame {
         this.emailAccount = email;
         this.passwordAccount = password;
         this.setLocationRelativeTo(null);
-        System.out.println(emailAccount+ " "+password);
+        System.out.println(emailAccount+ ">>"+password);
     }
 
     /**
@@ -79,6 +79,11 @@ public class Dashboard extends javax.swing.JFrame {
         });
 
         Delete.setText("Delete");
+        Delete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DeleteActionPerformed(evt);
+            }
+        });
 
         jLabel1.setBackground(new java.awt.Color(0, 102, 102));
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -193,6 +198,12 @@ public class Dashboard extends javax.swing.JFrame {
         new updateAccount(this.emailAccount, this.passwordAccount).setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_updateActionPerformed
+
+    private void DeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteActionPerformed
+        // TODO add your handling code here:
+         new Delete(this.emailAccount, this.passwordAccount).setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_DeleteActionPerformed
 
     /**
      * @param args the command line arguments
