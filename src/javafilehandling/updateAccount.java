@@ -67,6 +67,7 @@ public class updateAccount extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(255, 153, 153));
         jPanel1.setMaximumSize(new java.awt.Dimension(100, 30));
 
         jLabel2.setText("First Name");
